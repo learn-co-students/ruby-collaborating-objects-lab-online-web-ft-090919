@@ -20,7 +20,7 @@ class Song
     artist_name = filename.split("-")[0].strip
     song_name = filename.split("-")[1].strip
     new_song = Song.new(song_name)
-    new_song.artist_name=(artist_name)
+    new_song.artist_name = artist_name
     new_song
   end
 end
