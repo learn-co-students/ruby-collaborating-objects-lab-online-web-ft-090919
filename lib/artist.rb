@@ -17,12 +17,10 @@ class Artist
   end
 
   def songs
-    # binding.pry
     Song.all.select {|song| song.artist == self }
   end
 
   def add_song(song)
-    # binding.pry
     song.artist = self
   end
 
@@ -33,7 +31,7 @@ class Artist
     if !artist
       artist = Artist.new(artist_name)
     end
-    # binding.pry
+
     artist
   end
 

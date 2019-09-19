@@ -1,5 +1,3 @@
-require "pry"
-require "pry-moves"
 
 class Song
 
@@ -12,12 +10,6 @@ class Song
     @@all << self
   end
 
-  # def artist=(artist)
-  #   Artist.all.select {|artist| artist.name == self.name}
-  #   # @artist = artist
-  #   binding.pry
-  # end
-
   def self.all
     @@all
   end
@@ -27,14 +19,8 @@ class Song
     artist_name, song_name = filename.split(" - ")
 
     new_song = self.new(song_name)
-    # artist = Artist.all.select {|artist| artist.name == artist_name }
-    # if artist.empty?
-    #   artist = Artist.new(artist_name)
-    # end
 
     new_song.artist_name = artist_name
-
-    # binding.pry
 
     new_song
   end
