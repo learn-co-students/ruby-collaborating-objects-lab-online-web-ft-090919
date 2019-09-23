@@ -14,7 +14,8 @@ class Artist
 
   
   def add_song(song)
-    @songs << song 
+    song.artist = self
+    #@songs << song 
    # binding.pry
   end 
   
@@ -49,28 +50,24 @@ class Artist
    
   
   def print_songs
-     
-     
-     
-     @songs.each{|song| puts song.name} 
-     
+     songs.each{|song| puts song.name} 
   end
   
   def self.all
     @@all 
   end 
   
-  #def songs 
-   # binding.pry
+  def songs 
+    #binding.pry
     #artist_songs = Song.all.select do|song|
       #song.artist == self
-   #   Song.find_by_artist(self)
+      Song.find_by_artist(self)
     #end 
     #Pry.config.input = STDIN
     #Pry.config.output = STDOUT
     #binding.pry
     #artist_songs
-  #end 
+  end 
   
   
   
