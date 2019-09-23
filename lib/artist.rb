@@ -15,6 +15,7 @@ class Artist
   
   def add_song(song)
     @songs << song 
+   # binding.pry
   end 
   
   def save
@@ -59,12 +60,19 @@ class Artist
     @@all 
   end 
   
-  def songs 
-    @songs
-    Pry.config.input = STDIN
-    Pry.config.output = STDOUT
-    binding.pry
-  end 
+  #def songs 
+   # binding.pry
+    #artist_songs = Song.all.select do|song|
+      #song.artist == self
+   #   Song.find_by_artist(self)
+    #end 
+    #Pry.config.input = STDIN
+    #Pry.config.output = STDOUT
+    #binding.pry
+    #artist_songs
+  #end 
+  
+  
   
 
 end 

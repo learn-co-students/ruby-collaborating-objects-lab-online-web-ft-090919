@@ -20,11 +20,18 @@ class Song
   def artist_name=(name)
     self.artist= Artist.find_or_create_by_name(name)
     self.artist.add_song(self)
+    #binding.pry
   end 
   
   
   def self.all 
     @@all
+  end 
+  
+  def self.find_by_artist(artist)
+    Song.all.select do |song|
+      song.artist == artist
+    end 
   end 
   
 end 
